@@ -51,6 +51,22 @@ ADD *snapshot*.json /
 # Restore the snapshot to install custom nodes
 RUN /restore_snapshot.sh
 
+# Enters comfyui directory
+WORKDIR /comfyui
+
+# Copies custom_nodes from network space
+COPY src/custom_nodes ./custom_nodes/
+
+# Proof git install
+RUN apt-get update && apt-get install -y git
+
+# Clone the repositories into the custom_nodes directory
+RUN git clone https://github.com/ramyma/A8R8_ComfyUI_nodes.git ./custom_nodes/A8R8_ComfyUI_nodes
+
+# Force install custom nodes requirements
+COPY custom_requirements.txt .
+RUN pip install -r custom_requirements.txt
+
 # Start container
 CMD ["/start.sh"]
 
