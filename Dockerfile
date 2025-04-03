@@ -72,6 +72,17 @@ RUN git clone https://github.com/Fannovel16/comfyui_controlnet_aux ./custom_node
 RUN git clone https://github.com/cubiq/ComfyUI_essentials ./custom_nodes/ComfyUI_essentials
 RUN git clone https://github.com/cubiq/ComfyUI_IPAdapter_plus ./custom_nodes/ComfyUI_IPAdapter_plus
 
+#Step 03
+RUN git clone https://github.com/JPS-GER/ComfyUI_JPS-Nodes ./custom_nodes/jps-nodes
+RUN git clone https://github.com/Extraltodeus/ComfyUI-AutomaticCFG ./custom_nodes/comfyui-automaticcfg
+RUN git clone https://github.com/pythongosssss/ComfyUI-Custom-Scripts ./custom_nodes/comfyui-custom-scripts
+RUN git clone https://github.com/zhuanqianfish/ComfyUI-EasyNode ./custom_nodes/ComfyUl-EasyNode
+RUN git clone https://github.com/yolain/ComfyUI-Easy-Use ./custom_nodes/comfyui-easy-use
+#RUN git clone https://github.com/kijai/ComfyUI-Florence2 ./custom_nodes/ComfyUI-Florence2
+RUN git clone https://github.com/ltdrdata/ComfyUI-Impact-Pack ./custom_nodes/comfyui-impact-pack
+#RUN git clone https://github.com/ltdrdata/ComfyUI-Impact-Subpack ./custom_nodes/ComfyUI-Impact-Subpack
+
+
 # Force install custom nodes requirements
 COPY custom_requirements.txt .
 RUN pip install -r custom_requirements.txt
