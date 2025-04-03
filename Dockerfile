@@ -86,9 +86,7 @@ RUN git clone https://github.com/ltdrdata/ComfyUI-Impact-Pack ./custom_nodes/com
 RUN git clone https://github.com/kijai/ComfyUI-KJNodes ./custom_nodes/comfyui-kjnodes
 RUN git clone https://github.com/shadowcz007/comfyui-mixlab-nodes ./custom_nodes/comfyui-mixlab-nodes
 RUN git clone https://github.com/glowcone/comfyui-string-converter ./custom_nodes/comfyui-string-converter
-RUN git clone https://github.com/shiimizu/ComfyUI-TiledDiffusion ./custom_nodes/tiled-diffusion
-RUN git clone https://github.com/rgthree/rgthree-comfy ./custom_nodes/rgthree-comfy
-RUN git clone https://github.com/WASasquatch/was-node-suite-comfyui ./custom_nodes/was-node-suite-comfyui
+
 
 
 #Dependencies and other stuff
