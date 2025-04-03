@@ -6,3 +6,5 @@ matplotlib
 accelerate
 
 scikit-image
+
+segment_anything
