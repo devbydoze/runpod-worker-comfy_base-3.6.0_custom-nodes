@@ -95,12 +95,6 @@ RUN git clone https://github.com/glowcone/comfyui-string-converter ./custom_node
 # For ComfyUI Easy Node
 COPY src/FISH_EasyCapture ./web/extensions/FISH_EasyCapture
 
-#Step 04
-# For Was node suite 
-WORKDIR ./custom_nodes/was-node-suite-comfyui
-RUN pip install -r requirements.txt
-WORKDIR /comfyui
-
 # Force install custom nodes requirements
 COPY custom_requirements.txt .
 RUN pip install -r custom_requirements.txt
