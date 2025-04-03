@@ -1,2 +1,8 @@
 piexif
+
 opencv-python-headless
+matplotlib
+
+accelerate
+
+scikit-image
