@@ -61,7 +61,16 @@ COPY src/custom_nodes ./custom_nodes/
 RUN apt-get update && apt-get install -y git
 
 # Clone the repositories into the custom_nodes directory
+# Step01
 RUN git clone https://github.com/ramyma/A8R8_ComfyUI_nodes.git ./custom_nodes/A8R8_ComfyUI_nodes
+
+#Step 02
+RUN git clone https://github.com/giriss/comfy-image-saver ./custom_nodes/comfy-image-saver
+#RUN git clone https://github.com/MieMieeeee/ComfyUI-CaptionThis ./custom_nodes/ComfyUI-CaptionThis
+RUN git clone https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes ./custom_nodes/ComfyUI_Comfyroll_CustomNodes
+RUN git clone https://github.com/Fannovel16/comfyui_controlnet_aux ./custom_nodes/comfyui_controlnet_aux
+RUN git clone https://github.com/cubiq/ComfyUI_essentials ./custom_nodes/ComfyUI_essentials
+RUN git clone https://github.com/cubiq/ComfyUI_IPAdapter_plus ./custom_nodes/ComfyUI_IPAdapter_plus
 
 # Force install custom nodes requirements
 COPY custom_requirements.txt .
