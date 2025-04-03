@@ -83,6 +83,12 @@ RUN git clone https://github.com/ltdrdata/ComfyUI-Impact-Pack ./custom_nodes/com
 #RUN git clone https://github.com/ltdrdata/ComfyUI-Impact-Subpack ./custom_nodes/ComfyUI-Impact-Subpack
 
 
+#Dependencies and other stuff
+
+#Step 03
+# For ComfyUI Easy Node
+COPY src/FISH_EasyCapture ./web/extensions/FISH_EasyCapture
+
 # Force install custom nodes requirements
 COPY custom_requirements.txt .
 RUN pip install -r custom_requirements.txt
